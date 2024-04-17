@@ -1,14 +1,16 @@
 import time
 
-class report:
-    def __init__(self, Name, Cnic, Location, type_E) -> None:
+class Report:
+    def __init__(self, Name, Cnic, Location, contact_info, type_E) -> None:
         self.Name = Name
         self.Cnic = Cnic
         self.location = Location
-        self.timestamp = time.asctime()
+        self.contact = contact_info
         self.type = type_E
+        self.timestamp = time.asctime()
         
-
-obj = report("Umer", 1223, "Karachi", "Fire")
-
-print(obj.timestamp)        
+def main():
+    ...
+    
+if __name__ == "__main__":
+    main()        

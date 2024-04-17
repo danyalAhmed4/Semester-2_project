@@ -1,4 +1,7 @@
 import socket
+import pickle
+
+import Firestation
 
 def handle_client(server):
     server.listen()
@@ -12,8 +15,8 @@ def server_start():
 
 def main():
     
-    HEADER = 128
-    SERVER = socket.gethostbyname(socket.gethostname())
+    HEADER = 1024
+    SERVER = '127.0.0.1'
     PORT = 12345
     ADDR = (SERVER, PORT)
     
