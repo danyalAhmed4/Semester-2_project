@@ -18,7 +18,6 @@ class FireMen(Person):
         else:
             return self.is_deployed
     
-
 class policeMan(Person):
     def __init__(self, name, age, experience, id):
         super().__init__(name, age)
@@ -29,7 +28,11 @@ class policeMan(Person):
         print("Police Have been deployed")
         
 class Medic(Person):
-    ...
+    def __init__(self, name, age, experience, id):
+        super().__init__(name, age)
+        self.experience = experience
+        self.id = id
+        
 
 def main():
     ...

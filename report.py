@@ -5,11 +5,10 @@ class report:
         self.Name = Name
         self.Cnic = Cnic
         self.location = Location
-        self.timestamp = time.localtime()
-        (self.year, self.month, self.date) = self.timestamp[0], self.timestamp[1], self.timestamp[3]
+        self.timestamp = time.asctime()
         self.type = type_E
         
 
 obj = report("Umer", 1223, "Karachi", "Fire")
 
-print(obj.year)        
+print(obj.timestamp)        
