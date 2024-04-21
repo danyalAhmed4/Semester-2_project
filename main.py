@@ -1,22 +1,24 @@
 import socket
 import pickle
+import threading
 
 import Firestation
 
-def handle_client(server):
+def handle_client(conn, addr):
+    ...
+    
+def server_start(server):
     server.listen()
     while True:
         client_socket, client_address = server.accept()
-        print(client_socket)
-        print(client_address)
-    
-def server_start():
-    ...
+        thread = threading.Thread(target=handle_client, args=(client_socket, client_address))
+        thread.start()
+        print(f'[ACTIVE CONNECTIONS] {threading.activeCount() - 1}')
 
 def main():
     
     HEADER = 1024
-    SERVER = '127.0.0.1'
+    SERVER = socket.gethostbyname(socket.gethostname())
     PORT = 12345
     ADDR = (SERVER, PORT)
     
@@ -25,7 +27,7 @@ def main():
     #Binding our socket
     server.bind(ADDR)
     
-    handle_client(server)
+    server_start(server)
 
 if __name__ == "__main__":
     main()

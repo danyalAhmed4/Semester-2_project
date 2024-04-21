@@ -18,7 +18,7 @@ class caller(Person):
         
         
 def main():
-    SERVER = '127.0.0.1'
+    SERVER = socket.gethostbyname(socket.gethostname())
     PORT = 12345
     ADDR = (SERVER, PORT)
 
