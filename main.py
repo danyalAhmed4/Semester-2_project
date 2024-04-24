@@ -18,7 +18,13 @@ server.bind(ADDR)
 
 
 def handle_client(conn, addr):
-    ...
+    
+    connected = True
+    while connected:
+        data = conn.recv(HEADER)
+        class_definition, received_data = pickle.loads(data)
+        received_object = class_definition(*received_data)
+        station.file_report(received_object)
     
 def server_start():
     server.listen()

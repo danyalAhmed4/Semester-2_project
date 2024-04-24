@@ -1,0 +1,7 @@
+-------------------------------------
+Wed Apr 24 15:24:29 2024 
+Reporter Name     : umer 
+Reporter Cnic     : 21234 
+Emergency Location: karachi 
+Emergency Type    : fire 
+-------------------------------------

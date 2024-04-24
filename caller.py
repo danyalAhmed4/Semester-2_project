@@ -17,18 +17,17 @@ class caller(Person):
         self.caller_report = Report(self.name, self.cnic, self.location, self.contact_info, self.type)
         
         
-def main():
-    SERVER = socket.gethostbyname(socket.gethostname())
-    PORT = 12345
-    ADDR = (SERVER, PORT)
+SERVER = socket.gethostbyname(socket.gethostname())
+PORT = 12345
+ADDR = (SERVER, PORT)
 
-    #client socket
-    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #connection
-    client_socket.connect(ADDR)
-    
-    while True:
-        continue
-    
-if __name__ == "__main__":
-    main()
+#client socket
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#connection
+client_socket.connect(ADDR)
+
+report = Report('umer', '21234', 'karachi', '03132271030', 'fire')
+
+data = pickle.dumps(report)
+
+client_socket.sendall(data)
