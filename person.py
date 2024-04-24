@@ -17,8 +17,6 @@ class FireMen(Person):
         
         else:
             return self.is_deployed
-        
-    
     
 class policeMan(Person):
     def __init__(self, name, age, experience, id):

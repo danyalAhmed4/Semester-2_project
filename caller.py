@@ -27,5 +27,8 @@ def main():
     #connection
     client_socket.connect(ADDR)
     
+    while True:
+        continue
+    
 if __name__ == "__main__":
     main()
