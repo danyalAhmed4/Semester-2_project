@@ -65,52 +65,47 @@ name_label.pack(side="top")
 name_entry = tk.Entry(frame)
 name_entry.pack(side="top")
 
-# Create a label and entry for the CNIC input with a consistent font and font size
 cnic_label = tk.Label(frame, text="CNIC:", bg='#DEDEDE')
 cnic_label.pack(side="top")
 cnic_entry = tk.Entry(frame)
 cnic_entry.pack(side="top")
 
-# Create a label and entry for the location input with a consistent font and font size
 location_label = tk.Label(frame, text="Location:", bg='#DEDEDE')
 location_label.pack(side="top")
 location_entry = tk.Entry(frame)
 location_entry.pack(side="top")
 
-# Create a label and entry for the contact info input with a consistent font and font size
 contact_info_label = tk.Label(frame, text="Contact Info:", bg='#DEDEDE')
 contact_info_label.pack(side="top")
 contact_info_entry = tk.Entry(frame)
 contact_info_entry.pack(side="top")
 
-# Create a dropdown menu for the type of emergency with a consistent font and font size
+#dropdown box for various emergencies
 type_e_var = tk.StringVar(window)
 type_e_var.set("Select Emergency Type")
 type_e_options = ["Fire", "Injury", "Crime"]
 type_e_menu = tk.OptionMenu(frame, type_e_var, *type_e_options)
 type_e_menu.pack(side="top", pady=20)
 
-# Create a submit button with a consistent font and font size
+#submit button that calls the submit_form function when clicked
 submit_button = tk.Button(window, text="Submit", font=("Arial", 12), command=submit_form)
 submit_button.pack(pady=1)
 
-# Get the screen width and height
+#get the screen width and height
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 
-# Calculate the window width and height
+#calculate the window width and height
 window_width = 295
 window_height = 300
 
-# Calculate the x and y coordinates to center the window on the screen
+#calculate the x and y coordinates to center the window on the screen
 x = (screen_width // 2) - (window_width // 2)
 y = (screen_height // 2) - (window_height // 2)
 
-# Set the window geometry to be centered on the screen
+#setting the window geometry to be centered on the screen, and the background color of the window
 window.geometry(f"{window_width}x{window_height}+{x}+{y}")
-
-# Set the background color of the window
 window.config(bg="#DEDEDE")
 
-# Start the Tkinter event loop
+#Tkinter event loop
 window.mainloop()
