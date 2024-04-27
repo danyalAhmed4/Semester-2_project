@@ -1,12 +1,11 @@
 import socket
 import pickle
-import threading
 
 from Firestation import firestation
 
 station = firestation()
     
-HEADER = 1024
+HEADER = 2048
 SERVER = socket.gethostbyname(socket.gethostname())
 PORT = 12345
 ADDR = (SERVER, PORT)
@@ -18,21 +17,24 @@ server.bind(ADDR)
 
 
 def handle_client(conn, addr):
-    
     connected = True
     while connected:
-        data = conn.recv(HEADER)
-        class_definition, received_data = pickle.loads(data)
-        received_object = class_definition(*received_data)
+        data = b''
+        while len(data) < HEADER:
+            chunk = conn.recv(HEADER - len(data))
+            if not chunk:
+                break
+            data += chunk
+        if not data:
+            break
+        received_object = pickle.loads(data)
         station.file_report(received_object)
     
 def server_start():
     server.listen()
     while True:
         conn, addr = server.accept()
-        thread = threading.Thread(target=handle_client, args=(conn, addr))
-        thread.start()
-        print(f'[ACTIVE CONNECTIONS] {threading.active_count()}')
+        handle_client(conn, addr)
 
 
 server_start()
