@@ -9,6 +9,7 @@ class firestation:
                  f'{REPORT.timestamp} \n',
                  f'Reporter Name     : {REPORT.Name} \n',
                  f'Reporter Cnic     : {REPORT.Cnic} \n',
+                 f'Reporter Contact  : {REPORT.contact}\n',
                  f'Emergency Location: {REPORT.location} \n',
                  f'Emergency Type    : {REPORT.type} \n',
                  '-------------------------------------\n']
@@ -31,10 +32,6 @@ class firestation:
             
         elif REPORT.type == 'injury':
             print('Dispatching Medics')
-            
-        else:
-            print('Invalid Report, Ignoring')
-            return False
         
 def main():
     obj = Report('Umer', '12400982', 'Karachi', '03132271030', 'Fire')
