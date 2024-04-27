@@ -1,5 +1,6 @@
 import socket
 import pickle
+import threading
 
 from Firestation import firestation
 
@@ -34,7 +35,9 @@ def server_start():
     server.listen()
     while True:
         conn, addr = server.accept()
-        handle_client(conn, addr)
+        thread = threading.Thread(target=handle_client, args=(conn, addr))
+        thread.start()
+        print(f'[NO OF CONNECTIONS]:{threading.active_count()-1}')
 
 
 server_start()

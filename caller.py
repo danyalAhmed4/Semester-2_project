@@ -26,10 +26,15 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #connection
 client_socket.connect(ADDR)
 
-report_example = Report('umer', '21234', 'karachi', '03132271030', 'fire')
+name = input("Name             : ")
+cnic = input("CNIC             : ")
+location = input("Location         : ")
+phone_number = input("Phone Number     : ")
+type_e = input("Type of Emergency: ")
+
+report_example = Report(name, cnic, location, phone_number, type_e)
 
 data = pickle.dumps(report_example)
 
 client_socket.sendall(data)
 
-client_socket.close()
