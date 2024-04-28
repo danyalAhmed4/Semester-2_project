@@ -2,9 +2,9 @@ import socket
 import pickle
 import threading
 
-from Firestation import firestation
+from Firestation import station
 
-station = firestation()
+station = station()
     
 HEADER = 2048
 SERVER = socket.gethostbyname(socket.gethostname())
