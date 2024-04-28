@@ -1,7 +1,6 @@
 import socket
 import pickle
 
-from person import Person
 from report import Report
 import tkinter as tk
 
@@ -9,6 +8,11 @@ HEADER = 2048
 SERVER = socket.gethostbyname(socket.gethostname())
 PORT = 12345
 ADDR = (SERVER, PORT)
+
+class Person:
+    def __init__(self, name):
+        self.name = name 
+
 class Caller(Person):
     def __init__(self, name, cnic, location, contact_info, type_e):
         super().__init__(name)

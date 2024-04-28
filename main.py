@@ -45,7 +45,6 @@ def server_start():
 #Without waiting for the previous connection to end.
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
-        print(f'[NO OF CONNECTIONS]:{threading.active_count()-1}')
 
 
 server_start()

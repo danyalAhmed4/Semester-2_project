@@ -1,48 +1,8 @@
 -------------------------------------
-Sun Apr 28 17:02:07 2024 
-Reporter Name     : Umer 
-Reporter Cnic     : 12400982 
+Sun Apr 28 18:24:54 2024 
+Reporter Name     : umer 
+Reporter Cnic     : 42201-24535-3 
 Reporter Contact  : 03132271030
-Emergency Location: a 
-Emergency Type    : Fire 
--------------------------------------
--------------------------------------
-Sun Apr 28 17:03:25 2024 
-Reporter Name     : dasg 
-Reporter Cnic     : dsgsd 
-Reporter Contact  : agdsg
-Emergency Location: a 
+Emergency Location: n 
 Emergency Type    : Injury 
--------------------------------------
--------------------------------------
-Sun Apr 28 17:13:37 2024 
-Reporter Name     : Umer 
-Reporter Cnic     : 12400982 
-Reporter Contact  : 03132271030
-Emergency Location: a 
-Emergency Type    : Fire 
--------------------------------------
--------------------------------------
-Sun Apr 28 17:14:17 2024 
-Reporter Name     : Umer 
-Reporter Cnic     : 12400982 
-Reporter Contact  : 03132271030
-Emergency Location: j 
-Emergency Type    : Fire 
--------------------------------------
--------------------------------------
-Sun Apr 28 17:15:07 2024 
-Reporter Name     : Umer 
-Reporter Cnic     : 12400982 
-Reporter Contact  : 03132271030
-Emergency Location: j 
-Emergency Type    : Fire 
--------------------------------------
--------------------------------------
-Sun Apr 28 17:16:18 2024 
-Reporter Name     : h 
-Reporter Cnic     : fa 
-Reporter Contact  : fas
-Emergency Location: j 
-Emergency Type    : Fire 
 -------------------------------------
