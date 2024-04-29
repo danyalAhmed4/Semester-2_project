@@ -5,15 +5,15 @@ import time
 
 #this is the map that the djikstra's algorithm will be applied to.
 #it is a dictionary where each key represents a node and it's adjacent nodes along with the cost of going to that node.
-MAP = {'a' : [(2, 'm'), (3, 'p'), (1, 'j'), (4, 'hospital')],
-       'm' : [(2, 'a'), (2, 'n'), (7, 'hospital')],
-       'b' : [(4, 'p'), (2, 'n'), (5, 'firestation')],
-       'n' : [(2, 'm'), (2, 'b'), (6, 'firestation')],
-       'p' : [(3, 'a'), (4, 'b'), (3, 'j'), (7, 'policestation')],
-       'j' : [(1, 'a'), (3, 'p'), (15, 'policestation')],
-       'hospital' : [(4, 'a'), (7, 'm')],
-       'firestation' : [(5, 'b'), (6, 'n')],
-       'policestation' : [(7, 'p'), (15, 'j')]}
+MAP = {'gulshan' : [(2, 'fb area'), (3, 'airport'), (1, 'dha'), (4, 'hospital')],
+       'fb area' : [(2, 'gulshan'), (2, 'malir'), (7, 'hospital')],
+       'johar' : [(4, 'airport'), (2, 'malir'), (5, 'firestation')],
+       'malir' : [(2, 'fb area'), (2, 'johar'), (6, 'firestation')],
+       'airport' : [(3, 'gulshan'), (4, 'johar'), (3, 'dha'), (7, 'policestation')],
+       'dha' : [(1, 'gulshan'), (3, 'airport'), (15, 'policestation')],
+       'hospital' : [(4, 'gulshan'), (7, 'fb area')],
+       'firestation' : [(5, 'johar'), (6, 'malir')],
+       'policestation' : [(7, 'airport'), (15, 'dha')]}
 
 
 def dijkstra(start, end, MAP=MAP):
